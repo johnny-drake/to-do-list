@@ -1,0 +1,73 @@
+body {
+    margin: 0px;
+    font-family: "Inconsolata";
+    background-color: rgb(160, 160, 231)
+}
+
+.compass {
+    display: flex;
+}
+
+.headerleft {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 15vw;
+    background-color: aquamarine;
+    border-right: 2px solid black;
+}
+
+#heading {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+    width: 15vw;
+    margin-left: 1vw;
+    background-color: rgb(65, 126, 106);
+}
+
+#home,
+#today,
+#week,
+#projects {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 4vh;
+    width: 15vw;
+    margin-left: 1vw;
+    background-color: rgb(65, 126, 106);
+    margin-top: 2vh;;
+    font-size: 1.2em;
+
+}
+
+#home:hover,
+#today:hover,
+#week:hover,
+#projects:hover {
+    transform: scale(1.1);
+    font-weight: 700;
+    border: 2px solid white;
+}
+
+#content {
+    display: flex;
+    justify-content: flex-end;
+    width: 60vw;
+    height: auto;
+    margin-top: 8vw;
+}
+
+#todayTitles {
+    display: grid;
+    grid-template-columns: 35vw 8vw;
+    grid-template-rows: 3vh auto;
+    font-size: 1.5em;
+}
+
+#thisDay,
+#dueDate {
+    border-bottom: 2px outset rgb(62, 62, 105);
+}
