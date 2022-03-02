@@ -1,10 +1,10 @@
-const todayPageLoad = () => {
+const weekPageLoad = () => {
 
     const newInfo = document.createElement('form');
         newInfo.setAttribute("id", "newInfo");
         newInfo.setAttribute("method", "post");
         newInfo.setAttribute("action", "submit.php");
-        document.getElementById('contentToday').appendChild(newInfo);
+        document.getElementById('contentWeek').appendChild(newInfo);
 
         const taskName = document.createElement('INPUT');
             taskName.setAttribute("type", "text");
@@ -21,11 +21,11 @@ const todayPageLoad = () => {
         
     const todayTitles = document.createElement('div');
         todayTitles.setAttribute("id", "todayTitles");
-        document.getElementById('contentToday').appendChild(todayTitles);
+        document.getElementById('contentWeek').appendChild(todayTitles);
 
         const thisDay = document.createElement('div');
             thisDay.setAttribute("id", "thisDay");
-            const thisDayText = document.createTextNode("Today");
+            const thisDayText = document.createTextNode("This Week");
             thisDay.appendChild(thisDayText);
             document.getElementById('todayTitles').appendChild(thisDay);
 
@@ -37,4 +37,4 @@ const todayPageLoad = () => {
             
 }
 
-export {todayPageLoad};
+export {weekPageLoad};
