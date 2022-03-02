@@ -1,5 +1,26 @@
 const homePageLoad = () => {
 
+
+    const newInfo = document.createElement('div');
+        newInfo.setAttribute("id", "newInfo");
+        document.getElementById('content').appendChild(newInfo);
+
+        const taskName = document.createElement('INPUT');
+            taskName.setAttribute("type", "text");
+            taskName.setAttribute("id", "taskName");
+            document.getElementById('newInfo').appendChild(taskName);
+
+        const date = document.createElement('INPUT');
+            date.setAttribute("type", "date");
+            date.setAttribute("id", "date");
+            document.getElementById('newInfo').appendChild(date);
+
+        const addTask = document.createElement('button');
+            addTask.setAttribute("id", "addTask");
+            const addTaskText = document.createTextNode ("+");
+            addTask.appendChild(addTaskText);
+            document.getElementById('newInfo').appendChild(addTask);
+        
     const todayTitles = document.createElement('div');
         todayTitles.setAttribute("id", "todayTitles");
         document.getElementById('content').appendChild(todayTitles);
@@ -15,13 +36,12 @@ const homePageLoad = () => {
             const dueDateText = document.createTextNode("Due Date");
             dueDate.appendChild(dueDateText);
             document.getElementById('todayTitles').appendChild(dueDate);
+        
+        
 
-        const addTask = document.createElement('div');
-                addTask.setAttribute("button", "addTask");
-                const addTaskText = document.createTextNode ("+ Add Task");
-                addTask.appendChild(addTaskText);
-                document.getElementById('todayTitles').appendChild(addTask);
-             
+
+        
+
 }
 
 export {homePageLoad};
