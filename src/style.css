@@ -174,7 +174,8 @@ body {
 }
 
 #contentToday,
-#contentWeek {
+#contentWeek,
+#contentProject {
     display: flex;
     flex-direction: column;
     align-items: flex-end;

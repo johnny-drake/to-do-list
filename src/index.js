@@ -3,11 +3,12 @@ import {todayPageLoad} from './homePage';
 import {weekPageLoad} from './weekPage';
 import {addTask} from './addTask';
 import {addProject} from './addProject';
+import {projectPageLoad} from './projectPage';
 
-weekPageLoad();
-addTask();
-todayPageLoad();
-addTask();
+// weekPageLoad();
+// addTask();
+// todayPageLoad();
+// addTask();
 
 const content = document.getElementById("content");
 
@@ -39,6 +40,7 @@ const changeToToday = document.getElementById("today").addEventListener("click",
 })
 
 addProject();
+projectPageLoad();
 
 
 
