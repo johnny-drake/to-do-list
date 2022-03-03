@@ -25,12 +25,13 @@ body {
     width: 15vw;
     margin-left: 1vw;
     background-color: rgb(65, 126, 106);
+    border: 2px solid black;
 }
 
 #home,
 #today,
 #week,
-#projects {
+#addProject {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -38,6 +39,7 @@ body {
     width: 15vw;
     margin-left: 1vw;
     background-color: rgb(65, 126, 106);
+    border: 2px solid rgb(0, 0, 0);
     margin-top: 2vh;;
     font-size: 1.2em;
 
@@ -46,10 +48,119 @@ body {
 #home:hover,
 #today:hover,
 #week:hover,
-#projects:hover {
+#addProject:hover {
     transform: scale(1.1);
     font-weight: 700;
-    border: 2px solid white;
+    cursor: pointer;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#projectInfo {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3vh;
+    width: 12vw;
+    margin-left: 2.9vw;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-top: 0;
+    font-size: 1.2em;
+}
+
+#projectName {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    width: 9.5vw;
+    height: 2vh;
+    font-size: 0.7vw;
+    letter-spacing: 1px;
+}
+
+#projectName:focus {
+    border: none;
+    outline: none;
+}
+
+#projectSubmit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: aquamarine;
+    border: 2px solid rgb(64, 124, 104);
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0em;
+}
+
+#projectSubmit:hover {
+    background-color: rgb(99, 194, 162);
+    border: 2px solid rgb(19, 36, 30);
+    transform: scale(1.1);
+}
+
+#newProject {
+    display: grid;
+    justify-self: flex-end;
+    grid-template-columns: 20% 20% 60%;
+    height: 3vh;
+    width: 14vw;
+    margin-left: 1.4vw;
+    margin-top: 1vh;
+    row-gap: 10px;
+}
+
+#newProjectName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    background-color: burlywood;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(112, 29, 29);
+    cursor:pointer;
+}
+
+#deleteProject,
+#editProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 3vh;
+    background-color: burlywood;
+    border: 2px solid black;
+    font-size: 0.6em;
+    letter-spacing: 1px;
+    z-index: -1;
+    cursor:pointer;
+}
+
+#newProjectName:focus {
+    border: 2px solid black;
+    outline: 0px;
+}
+
+#newProjectName:hover,
+#editProject:hover,
+#deleteProject:hover {
+    background-color: white;
+    border: 2px solid black;
+    transform: scale(1.05);
+    font-weight: 700;
 }
 
 #content {
@@ -67,17 +178,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 65vw;
+    width: 100%;
     height: auto;
-    margin-top: 3vh;
-    position: relative;
-    width:100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
 }
-
 
 #todayTitles {
     display: grid;
@@ -197,4 +303,5 @@ body {
     font-weight: 700;
 }
 
+/* /////////////////////////// */
 

@@ -26,11 +26,12 @@ document.getElementById('addTask').addEventListener('click', function(event) {
     document.getElementById("todayTitles").appendChild(domDelete);
 
     domEdit.addEventListener("click", () => {
-        domTask.readOnly = false;
         if (domEdit.innerHTML == "Edit") {
+            domTask.readOnly = false;
             domEdit.innerHTML = "Save"
             domTask.style.background = "aquamarine";
         } else if (domEdit.innerHTML == "Save") {
+            domTask.readOnly = true;
             domEdit.innerHTML = "Edit"
             domTask.style.background = "rgb(160, 160, 231)";
         }
@@ -49,11 +50,6 @@ document.getElementById('addTask').addEventListener('click', function(event) {
     console.log("submit button");
     
 })
-
-
-
-
-
 }
 
 export {addTask};

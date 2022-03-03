@@ -1,3 +1,4 @@
+
 const weekPageLoad = () => {
 
     const newInfo = document.createElement('form');
@@ -5,6 +6,7 @@ const weekPageLoad = () => {
         newInfo.setAttribute("method", "post");
         newInfo.setAttribute("action", "submit.php");
         document.getElementById('contentWeek').appendChild(newInfo);
+        
 
         const taskName = document.createElement('INPUT');
             taskName.setAttribute("type", "text");
@@ -33,7 +35,7 @@ const weekPageLoad = () => {
             dueDate.setAttribute("id", "dueDate");
             const dueDateText = document.createTextNode("Due Date");
             dueDate.appendChild(dueDateText);
-            document.getElementById('todayTitles').appendChild(dueDate);            
+            document.getElementById('todayTitles').appendChild(dueDate);  
             
 }
 
