@@ -1,6 +1,6 @@
 
-const projectPageLoad = document.getElementsById("newProjectName").addEventListener("click", () => {
-        
+const projectPageLoad = () => {
+    
     const newInfo = document.createElement('form');
         newInfo.setAttribute("id", "newInfo");
         newInfo.setAttribute("method", "post");
@@ -26,7 +26,7 @@ const projectPageLoad = document.getElementsById("newProjectName").addEventListe
 
         const thisDay = document.createElement('div');
             thisDay.setAttribute("id", "thisDay");
-            const thisDayText = document.createTextNode("Today");
+            const thisDayText = document.createTextNode("Project");
             thisDay.appendChild(thisDayText);
             document.getElementById('todayTitles').appendChild(thisDay);
 
@@ -36,6 +36,7 @@ const projectPageLoad = document.getElementsById("newProjectName").addEventListe
             dueDate.appendChild(dueDateText);
             document.getElementById('todayTitles').appendChild(dueDate);            
                    
-});
+}
+
 
 export {projectPageLoad};
